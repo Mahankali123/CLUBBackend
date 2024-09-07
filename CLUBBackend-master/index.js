@@ -10,12 +10,7 @@ const collegeRouters=require('./routes/CollegeRouter');
 
 //middleware
 app.use(express.json());
-app.use(cors({
-    origin: 'https://club-frontend-tau.vercel.app',
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    credentials: true
-  }));
-  
+app.use(cors({origin:"*"}));
 app.use(bodyParser.json());
 //database connection
 connection();
